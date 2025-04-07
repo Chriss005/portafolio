@@ -1,0 +1,19 @@
+# Ignora la carpeta .vs (Visual Studio)
+.vs/
+
+# Ignora archivos de configuración de usuario
+*.user
+*.suo
+
+# Ignora binarios y compilados
+bin/
+obj/
+
+# Ignora archivos temporales
+*.log
+*.tmp
+*.cache
+
+# Ignora archivos generados por VS
+*.dbmdl
+*.pdb
