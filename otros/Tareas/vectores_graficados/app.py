@@ -26,7 +26,7 @@ def calcular_direccion(X, Y):
         elif Y < 0:
             angulo = 270
         else:
-            angulo = None  # El vector nulo no tiene dirección
+            angulo = None 
     else:
         angulo = math.degrees(math.atan(Y / X))
         if X < 0:
@@ -58,6 +58,7 @@ def graficarVector(x, y):
 def main():
 
     X, Y = pedirComponentes()
+    
     mostrarFormaVectorial(X, Y)
 
     modulo = calcularModulo(X, Y)
