@@ -19,27 +19,9 @@ def obtenerCuadrante(x, y):
     elif(x > 0 and y < 0):
         return 4
     
-def calcular_direccion(X, Y):
-    if X == 0:
-        if Y > 0:
-            angulo = 90
-        elif Y < 0:
-            angulo = 270
-        else:
-            angulo = None 
-    else:
-        angulo = math.degrees(math.atan(Y / X))
-        if X < 0:
-            angulo += 180
-    return angulo
-
 def calcularModulo(x, y):
     return math.sqrt(math.pow(x, 2) + math.pow(y, 2))
 
-def calcularAngulo(x, y):
-    anguloRadianes = math.atan2(y, x)
-    anguloGrados = math.degrees(anguloRadianes)
-    return anguloGrados
 
 def graficarVector(x, y):
     plt.figure()
@@ -62,10 +44,7 @@ def main():
     mostrarFormaVectorial(X, Y)
 
     modulo = calcularModulo(X, Y)
-    print(f"Módulo del vector: {modulo:.2f}")
-
-    angulo = calcularAngulo(X, Y)
-    print(f"Ángulo con respecto al eje X: {angulo:.2f}°")
+    print(f"Módulo del vector: {modulo}")
 
     cuadrante = obtenerCuadrante(X, Y)
     print(f"Cuadrante: {cuadrante}")
