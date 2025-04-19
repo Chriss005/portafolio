@@ -8,10 +8,16 @@ namespace Tarea05_POO.Domain
 {
     internal class Cuadrado
     {
-        public double x;
-        public double y;
-        public double lado;
+        private double x;
+        private double y;
+        private double lado;
 
+        public Cuadrado(double x1, double y1, double lado1)
+        {
+            x = x1;
+            y = y1;
+            lado = lado1;
+        }
         public double calcularArea()
         {
             return lado * lado;
@@ -20,10 +26,10 @@ namespace Tarea05_POO.Domain
         {
             return 4 * lado;
         }
-        public void moverCuadrado(double nuevaX, double nuevaY)
+        public void moverCuadrado(double desplazamientoX, double desplazamientoY)
         {
-            x = nuevaX;
-            y = nuevaY;
+            x += desplazamientoX;
+            y += desplazamientoY;
         }
     }
 }

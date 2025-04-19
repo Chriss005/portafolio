@@ -8,9 +8,14 @@ namespace Tarea05_POO.Domain
 {
     internal class Elipse
     {
-        public double semiEjeMayor;
-        public double semiEjeMenor;
+        private double semiEjeMayor;
+        private double semiEjeMenor;
 
+        public Elipse(double semiEjeMayor1, double semiEjeMenor1)
+        {
+            semiEjeMayor = semiEjeMayor1;
+            semiEjeMenor = semiEjeMenor1;
+        }
         public double calcularArea()
         {
             return Math.PI * semiEjeMayor * semiEjeMenor;
@@ -19,10 +24,10 @@ namespace Tarea05_POO.Domain
         {
             return Math.PI * (3(semiEjeMayor+ semiEjeMenor)-Math.Sqrt((3*semiEjeMayor + semiEjeMenor)*(semiEjeMayor+3*semiEjeMenor)))
         }
-        public void moverElipse(double nuevaX, double nuevaY)
+        public void moverElipse(double desplazamientoX, double desplazamientoY)
         {
-            x = nuevaX;
-            y = nuevaY;
+            x = desplazamientoX;
+            y = desplazamientoY;
         }
     }
 }

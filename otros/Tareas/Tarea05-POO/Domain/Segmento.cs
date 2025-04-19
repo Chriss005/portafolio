@@ -8,22 +8,29 @@ namespace Tarea05_POO.Domain
 {
     internal class Segmento
     {
-        public double xInicial;
-        public double yInicial;
-        public double xFinal;
-        public double yFinal;
+        private double x1;
+        private double y1;
+        private double x2;
+        private double y2;
 
+        public Segmento(double x3, double y3, double x4, double y4)
+        {
+            x1 = x3;
+            y1 = y3;
+            x2 = x4;
+            y2 = y4;
+        }
         public double calcularLongitud()
         {
             return Math.Sqrt(Math.Pow((xFinal - xInicial), 2) + Math.Pow((yFinal - yInicial), 2));
         }
 
-        public void moverSegmento(double nuevaX1, double nuevaY1, double nuevaX2, double nuevaY2)
+        public void moverSegmento(double desplazamientoX, double desplazamientoY)
         {
-            xInicial = nuevaX1;
-            yInicial = nuevaY1;
-            xFinal = nuevaX2;
-            yFinal = nuevaY2;
+            x1 = desplazamientoX;
+            y1 = desplazamientoY;
+            x2 = desplazamientoX;
+            y2 = desplazamientoY;
         }
     }
 

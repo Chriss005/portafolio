@@ -6,12 +6,18 @@ using System.Threading.Tasks;
 
 namespace Tarea05_POO.Domain
 {
-    public class Circunferencia
+    internal class Circunferencia
     {
-        public double x;
-        public double y;
-        public double radio;
-
+        private double x;
+        private double y;
+        private double radio;
+        
+        public Circunferencia(double x1, double y1, double radio1)
+        {
+            x = x1;
+            y = y1;
+            radio = radio1;
+        }
         public double calcularArea()
         {
             return Math.PI * radio * radio;
@@ -22,10 +28,10 @@ namespace Tarea05_POO.Domain
             return (2 * Math.PI) * radio; 
         }
 
-        public void moverCircunferencia(double nuevaX, double nuevaY)
+        public void moverCircunferencia(double desplazamientoX, double desplazamientoY)
         {
-            x = nuevaX;
-            y = nuevaY;
+            x += desplazamientoX;
+            y += desplazamientoY;
         }
     }
 }

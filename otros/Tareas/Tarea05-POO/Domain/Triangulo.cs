@@ -8,24 +8,38 @@ namespace Tarea05_POO.Domain
 {
     internal class Triangulo
     {
-        public double x;
-        public double y;
-        public double baseT;
-        public double altura;
-        public double lado;
+        private double x1;
+        private double y1;
+        private double x2;
+        private double y2;
+        private double x3;
+        private double y3;
 
+        public Triangulo(double cX1, double cY1, double cX2, double cY2, double cX3, double cY3)
+        {
+            x1 = cX1;
+            y1 = cY1;
+            x2 = cX2;
+            y2 = cY2;
+            x3 = cX3;
+            y3 = cY3;
+        }
         public double calcularArea()
         {
-            return (baseT * altura)/2;
+            return 0;
         }
         public double calcularPerimetro()
         {
-            return baseT + lado + lado;
+            return 0;
         }
-        public void moverTriangulo(double nuevaX, double nuevaY)
+        public void moverTriangulo(double desplazamientoX, double desplazamientoY)
         {
-            x = nuevaX;
-            y = nuevaY;
+            x1 = desplazamientoX;
+            y1 = desplazamientoY;
+            x2 = desplazamientoX;
+            y2 = desplazamientoY;
+            x3 = desplazamientoX;
+            y3 = desplazamientoY;
         }
     }
 }
